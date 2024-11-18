@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="intersection">
+        <!-- North Lane -->
+        <div class="lane vertical north-lane">
+            <div class="traffic-light" id="north-light"></div>
+            <div class="car" id="north-car">
+                <img src="car.png" alt="Car">
+            </div>
+        </div>
+        <!-- East Lane -->
+        <div class="lane horizontal east-lane">
+            <div class="traffic-light" id="east-light"></div>
+            <div class="car" id="east-car">
+                <img src="car.png" alt="Car">
+            </div>
+        </div>
+        <!-- South Lane -->
+        <div class="lane vertical south-lane">
+            <div class="traffic-light" id="south-light"></div>
+            <div class="car" id="south-car">
+                <img src="car.png" alt="Car">
+            </div>
+        </div>
+        <!-- West Lane -->
+        <div class="lane horizontal west-lane">
+            <div class="traffic-light" id="west-light"></div>
+            <div class="car emergency" id="west-car">
+                <img src="ambulance.png" alt="Ambulance">
+            </div>
+        </div>
+    </div>
+
+    <button onclick="startSimulation()">Start Simulation</button>
+    <button onclick="triggerEmergency()">Trigger Emergency</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
