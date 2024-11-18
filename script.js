@@ -41,18 +41,17 @@ function moveCars(direction) {
 // Trigger emergency priority
 function triggerEmergency() {
     emergencyMode = true;
-    const emergencyLane = "west";
+    const emergencyLane = "west"; // Emergency lane
     updateTrafficLights(emergencyLane);
 
     const emergencyCar = document.getElementById(`${emergencyLane}-car`);
-    emergencyCar.style.transform = "translateX(200px)";
+    emergencyCar.style.transform = "translateX(-200px)";  // Move to the left
 
     setTimeout(() => {
         emergencyCar.style.transform = "translateX(0)";
         emergencyMode = false;
     }, 3000);
 }
-
 // Start simulation with adaptive timing
 function startSimulation() {
     const directions = ["north", "east", "south", "west"];
